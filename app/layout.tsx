@@ -46,7 +46,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-20 my-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-4  md:mx-20 my-12">
             <div className="flex flex-col gap-3">
               <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
               <p className="text-[#363636] max-w-[374px]">
@@ -67,11 +67,11 @@ export default function RootLayout({
             </div>
             <div className="">
               <h3 className="text-xl font-semibold mb-3">Recent Post</h3>
-              <div className="bg-red-300">
+              <div className="">
                 {footerBlogData.map((data) => {
                   const { title, description, imageUrl } = data;
                   return (
-                    <article key={title} className="flex flex-col items-start bg-blue-200 mb-1">
+                    <article key={title} className="flex flex-col items-start mb-1">
                         <Image
                           src={imageUrl}
                           alt={title}
@@ -91,11 +91,11 @@ export default function RootLayout({
                 <article></article>
               </div>
             </div>
-            <div className="bg-red-200">
+            <div className="">
               <h3>Newsletter</h3>
             </div>
           </div>
-          <div className="border-t-[1px] border-gray-300 flex justify-between text-sm font-thin text-[#363636] py-2 px-20">
+          <div className="border-t-[1px] border-gray-300 flex justify-between text-sm font-thin text-[#363636] py-2 px-4  md:px-20">
             <p className="text-sm font-light text-[#363636]">
               © Copyright 2021. All Rights Reserved.
             </p>
