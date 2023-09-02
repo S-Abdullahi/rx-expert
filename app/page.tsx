@@ -51,7 +51,7 @@ export default function Home() {
             {navItem.map((item) => {
               const { title, url } = item;
               return (
-                <li>
+                <li key={title}>
                   <Link href={url}>{title}</Link>
                 </li>
               );
@@ -63,9 +63,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1  md:grid-cols-2 md:px-32 px-6 mt-8 items-center">
-        <div className="text-white flex flex-col items-end">
-          <div className="flex gap-2 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:px-32 px-6 mt-8 items-center">
+        <div className="text-white flex flex-col items-start bg-red-200">
+          <div className="flex gap-2 items-center ">
             <Image src="/line-1.png" alt="line" width={95} height={0} />
             <p className="font-extralight">RISK MITIGATION</p>
           </div>
