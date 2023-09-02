@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,7 +47,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-4  md:mx-20 my-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-6  md:mx-20 my-12">
             <div className="flex flex-col gap-3">
               <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
               <p className="text-[#363636] max-w-[374px]">
@@ -71,17 +72,22 @@ export default function RootLayout({
                 {footerBlogData.map((data) => {
                   const { title, description, imageUrl } = data;
                   return (
-                    <article key={title} className="flex flex-col items-start mb-1">
-                        <Image
-                          src={imageUrl}
-                          alt={title}
-                          width={106}
-                          height={92}
-                          className="object-contain"
-                        />
+                    <article
+                      key={title}
+                      className="flex flex-col md:flex-row items-start mb-1"
+                    >
+                      <Image
+                        src={imageUrl}
+                        alt={title}
+                        width={106}
+                        height={92}
+                        className="object-contain"
+                      />
 
                       <div>
-                        <h5 className="text-[#0F468E] font-semibold">{title}</h5>
+                        <h5 className="text-[#0F468E] font-semibold">
+                          {title}
+                        </h5>
                         <p className="max-w-[342px] text-base">{description}</p>
                         <button className="text-xs font-bold">Read More</button>
                       </div>
@@ -92,10 +98,17 @@ export default function RootLayout({
               </div>
             </div>
             <div className="">
-              <h3>Newsletter</h3>
+              <h3 className="text-xl font-semibold mb-3">Newsletter</h3>
+              <p className="mb-4">
+                Sign up to get new exclusive offers from our latest solutions
+              </p>
+              <input placeholder="Enter Your Email" className="shadow-md font-light rounded p-2 text-sm mb-4 max-w-[281px] h-[49px]" />
+              <button className="flex items-center gap-1 bg-[#62BB45] rounded-full text-sm font-semibold text-white px-5 py-2">
+                Submit <BsArrowRight />{" "}
+              </button>
             </div>
           </div>
-          <div className="border-t-[1px] border-gray-300 flex justify-between text-sm font-thin text-[#363636] py-2 px-4  md:px-20">
+          <div className="border-t-[1px] border-gray-300 flex flex-col md:flex-row md:justify-between gap-1 text-sm font-thin text-[#363636] py-2 px-6  md:px-20">
             <p className="text-sm font-light text-[#363636]">
               © Copyright 2021. All Rights Reserved.
             </p>
