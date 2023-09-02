@@ -34,7 +34,7 @@ const navItem: INavItem[] = [
 export default function Home() {
   return (
     <div className="bg-[url('/bnr-bg-home.png')] bg-no-repeat bg-cover">
-      <div className="text-sm text-[#F5F5F5] flex flex-col md:flex-row gap-2 md:justify-between py-4 px-6 md:px-32">
+      <div className="text-sm text-[#F5F5F5] flex flex-col md:flex-row gap-2 md:justify-between py-4 px-6 lg:px-32">
         <p className=" text-[#F5F5F5]">
           950 Boardwalk Suite 305, San Marcos, CA 92078
         </p>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white h-[73px] flex justify-between items-center  px-6 md:px-32">
+      <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
         <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
         <div className="flex gap-4 items-center">
           <ul className="md:flex gap-4 hidden">
@@ -58,29 +58,29 @@ export default function Home() {
             })}
           </ul>
           <HiOutlineMenu className="md:hidden text-2xl mr-3" />
-          <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden md:block">
+          <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden lg:block">
             Free Risk Assessment
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:px-32 px-6 mt-8 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:px-32 px-6 mt-8 items-center gap-3">
         <div className="text-white flex flex-col items-start">
           <div className="flex flex-col items-end">
             <div className="flex gap-2 items-center ">
               <Image src="/line-1.png" alt="line" width={95} height={0} />
               <p className="font-extralight">RISK MITIGATION</p>
             </div>
-            <h1 className="md:text-[104px] text-[80px] font-semibold -mt-7">
+            <h1 className="lg:text-[104px] sm:text-[80px] text-[65px] font-semibold -mt-6">
               Solutions
             </h1>
           </div>
 
           <div>
-            <h1 className="text-[35px] md:text-[44px] font-light -mt-8">
+            <h1 className="text-[28px] sm:text-[35px] lg:text-[44px] font-light -mt-4 md:-mt-7 leading-7 md:leading-[45px]">
               Are Our Top{" "}
               <span className="text-[#62BB45] font-semibold">Priority</span>
             </h1>
-            <p className="max-w-[455px] text-white text-base md:text-lg font-medium">
+            <p className="max-w-[455px] text-white text-base md:text-lg font-medium mt-4">
               How well does your health care organization prevent controlled
               substance drug diversion?
             </p>
