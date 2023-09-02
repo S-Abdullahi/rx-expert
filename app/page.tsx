@@ -33,7 +33,7 @@ const navItem: INavItem[] = [
 
 export default function Home() {
   return (
-    <div className="bg-[url('../public/bnr-bg-home.png')] bg-no-repeat bg-cover">
+    <div className="bg-[url('/bnr-bg-home.png')] bg-no-repeat bg-cover">
       <div className="text-sm text-[#F5F5F5] flex flex-col md:flex-row gap-2 md:justify-between py-4 px-6 md:px-32">
         <p className=" text-[#F5F5F5]">
           950 Boardwalk Suite 305, San Marcos, CA 92078
