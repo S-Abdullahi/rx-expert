@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { HiOutlineMenu } from "react-icons/hi";
+import Button from "./components/button";
 
 type INavItem = {
   title: string;
@@ -84,9 +85,7 @@ export default function Home() {
               How well does your health care organization prevent controlled
               substance drug diversion?
             </p>
-            <button className="flex items-center gap-2 px-6 py-2 mt-5 rounded-full border text-white border-white">
-              Readmore <BsArrowRight />{" "}
-            </button>
+            <Button buttonText="Read More" type="read more"/>
           </div>
         </div>
         <div className="flex justify-center">

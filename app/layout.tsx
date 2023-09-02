@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
+import Button from "./components/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -102,10 +103,8 @@ export default function RootLayout({
               <p className="mb-4">
                 Sign up to get new exclusive offers from our latest solutions
               </p>
-              <input placeholder="Enter Your Email" className="shadow-md font-light rounded p-2 text-sm mb-4 max-w-[281px] h-[49px]" />
-              <button className="flex items-center gap-1 bg-[#62BB45] rounded-full text-sm font-semibold text-white px-5 py-2">
-                Submit <BsArrowRight />{" "}
-              </button>
+              <input placeholder="Enter Your Email" className="shadow-sm font-light rounded p-2 text-sm mb-4 w-full h-[49px] border-[0.5px] border-gray-200" />
+              <Button buttonText="Submit" type="submit"/>
             </div>
           </div>
           <div className="border-t-[1px] border-gray-300 flex flex-col md:flex-row md:justify-between gap-1 text-sm font-thin text-[#363636] py-2 px-6  lg:px-32">
