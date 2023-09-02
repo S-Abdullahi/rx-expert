@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HiOutlineMenu } from "react-icons/hi";
 import Button from "./components/button";
 import SectionTitle from "./components/SectionTitle";
+import FormRow from "./components/FormRow";
 
 type INavItem = {
   title: string;
@@ -94,13 +95,71 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className="px-6 lg:px-32 mt-16">
-        <SectionTitle
-          sectionName="ABOUT US"
-          sectionHead="Terri Vidals"
-          sectionTertiary="Founder of"
-          sectionTertiaryEmphasis="Rxpert Solutions"
-        />
+      <section className="px-6 lg:px-32 py-16 grid grid-cols-1 lg:grid-cols-2 bg-[#F5F5F5] gap-14 relative">
+        <div>
+          <SectionTitle
+            sectionName="ABOUT US"
+            sectionHead="Terri Vidals"
+            sectionTertiary="Founder of"
+            sectionTertiaryEmphasis="Rxpert Solutions"
+          />
+          <div className="columns-2 gap-8 mt-4">
+            <p>
+              Theresa “Terri” has been a pharmacist for over 35 years, with 15
+              years of experience in medication safety and drug diversion
+              monitoring. Her background includes work in various clinical
+              roles, as well as leadership roles such as Pharmacy Operations
+              Manager, Medication Safety Officer, and Pharmacy Director. Terri
+              is a subject matter expert in drug diversion mitigation and
+              monitoring, and has initiated and overseen diversion monitoring
+              programs in healthcare facilities. Terri possesses a proven
+              ability to see the big picture, including what to look for and how
+              to look for it. While she is compassionate toward healthcare
+              professionals with substance abuse disorders, she also understands
+              the safety risks and is not afraid to ask hard questions during
+              investigation interviews. She is the host of a podcast, Drug
+              Diversion Insights, and is a recognized speaker on the topic of
+              substance abuse and drug diversion. Terri founded Rxpert Solutions
+              so that all facilities would have access to her expertise as an
+              alternative to, or as a bridge while waiting for, on-site
+              personnel to develop the expertise.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <Button buttonText="Read more" variant="contained" />
+            <Button
+              buttonText="Connect with Terri on Linkedin!"
+              variant="outlined"
+            />
+          </div>
+        </div>
+        <div className="">
+          <div className="max-w-[471px] px-[41px] py-[60px] bg-white shadow-md rounded-3xl ml-20 -mt-[200px]">
+            <h3 className="font-light text-[34px] leading-9 mb-3">
+              Book an{" "}
+              <span className="text-[#0F468E] text-[46px] font-semibold">
+                Appointment
+              </span>
+            </h3>
+            <p className="w-[398px] mb-6">
+              Please complete the details below and then click on submit and
+              we'll be in contact
+            </p>
+            <form className="flex flex-col gap-5">
+              <FormRow placeholder="Your Name..." />
+              <FormRow placeholder="Email Address..." />
+              <FormRow placeholder="Phone..." />
+              <FormRow placeholder="Subject..." />
+              <textarea
+                placeholder="Feedback/Query..."
+                className="border px-2 py-2 rounded text-sm"
+              />
+              <div>
+                <Button buttonText="Submit" variant="submit" />
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -2,15 +2,18 @@ import { BsArrowRight } from "react-icons/bs";
 
 type IButton = {
   buttonText: string;
-  type: "read more" | "submit";
+  type?: "read more" | "submit";
+  variant?: "outlined" | "contained" | 'submit';
 };
 
 export default function Button(prop: IButton) {
-  const { buttonText, type } = prop;
+  const { buttonText, type, variant } = prop;
   let buttonbg;
-  if (type === "read more") {
+  if (variant === "outlined") {
     buttonbg = "bg-transparent";
-  } else if (type === "submit") {
+  } else if (variant === "contained") {
+    buttonbg = "bg-[#0F468E]";
+  } else if (variant === "submit") {
     buttonbg = "bg-[#62BB45]";
   }
   return (
