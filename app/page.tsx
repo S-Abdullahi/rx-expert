@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import {HiOutlineMenu} from 'react-icons/hi'
+import { HiOutlineMenu } from "react-icons/hi";
 
 type INavItem = {
   title: string;
@@ -57,25 +57,30 @@ export default function Home() {
               );
             })}
           </ul>
-          <HiOutlineMenu className='md:hidden text-2xl mr-3'/>
+          <HiOutlineMenu className="md:hidden text-2xl mr-3" />
           <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden md:block">
             Free Risk Assessment
           </button>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 md:px-32 px-6 mt-8 items-center">
-        <div className="text-white flex flex-col items-start bg-red-200">
-          <div className="flex gap-2 items-center ">
-            <Image src="/line-1.png" alt="line" width={95} height={0} />
-            <p className="font-extralight">RISK MITIGATION</p>
+        <div className="text-white flex flex-col items-start">
+          <div className="flex flex-col items-end">
+            <div className="flex gap-2 items-center ">
+              <Image src="/line-1.png" alt="line" width={95} height={0} />
+              <p className="font-extralight">RISK MITIGATION</p>
+            </div>
+            <h1 className="md:text-[104px] text-[80px] font-semibold -mt-7">
+              Solutions
+            </h1>
           </div>
+
           <div>
-            <h1 className="md:text-[104px] text-[80px] font-semibold -mt-8">Solutions</h1>
-            <h1 className="text-[44px] font-light -mt-8">
+            <h1 className="text-[35px] md:text-[44px] font-light -mt-8">
               Are Our Top{" "}
               <span className="text-[#62BB45] font-semibold">Priority</span>
             </h1>
-            <p className="md:w-[455px] text-white text-lg font-medium">
+            <p className="max-w-[455px] text-white text-base md:text-lg font-medium">
               How well does your health care organization prevent controlled
               substance drug diversion?
             </p>
