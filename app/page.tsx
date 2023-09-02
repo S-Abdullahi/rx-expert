@@ -103,7 +103,7 @@ export default function Home() {
             sectionTertiary="Founder of"
             sectionTertiaryEmphasis="Rxpert Solutions"
           />
-          <div className="columns-2 gap-8 mt-4">
+          <div className="column-1 sm:columns-2 gap-8 mt-4">
             <p>
               Theresa “Terri” has been a pharmacist for over 35 years, with 15
               years of experience in medication safety and drug diversion
@@ -125,7 +125,7 @@ export default function Home() {
               personnel to develop the expertise.
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
             <Button buttonText="Read more" variant="contained" />
             <Button
               buttonText="Connect with Terri on Linkedin!"
@@ -133,15 +133,15 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="">
-          <div className="max-w-[471px] px-[41px] py-[60px] bg-white shadow-md rounded-3xl ml-20 -mt-[200px]">
-            <h3 className="font-light text-[34px] leading-9 mb-3">
+        <div className="flex items-center justify-center">
+          <div className="max-w-[471px] px-[41px] py-[60px] bg-white shadow-md rounded-3xl lg:-mt-[200px]">
+            <h3 className="font-light text-[30px] md:text-[34px] leading-9 mb-3">
               Book an{" "}
-              <span className="text-[#0F468E] text-[46px] font-semibold">
+              <span className="text-[#0F468E] text-[40px] md:text-[46px] font-semibold">
                 Appointment
               </span>
             </h3>
-            <p className="w-[398px] mb-6">
+            <p className="max-w-[398px] mb-6">
               Please complete the details below and then click on submit and
               we'll be in contact
             </p>
