@@ -1,11 +1,18 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import Button from "./components/button";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: '100'
+})
 
 export const metadata: Metadata = {
   title: "Rx-Expert website",
@@ -45,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${poppins.variable}`}>
         {children}
         <footer>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-6  lg:mx-32 my-12">
