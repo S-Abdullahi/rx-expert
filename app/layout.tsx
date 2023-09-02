@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-6  md:mx-20 my-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-6  md:mx-32 my-12">
             <div className="flex flex-col gap-3">
               <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
               <p className="text-[#363636] max-w-[374px]">
@@ -108,7 +108,7 @@ export default function RootLayout({
               </button>
             </div>
           </div>
-          <div className="border-t-[1px] border-gray-300 flex flex-col md:flex-row md:justify-between gap-1 text-sm font-thin text-[#363636] py-2 px-6  md:px-20">
+          <div className="border-t-[1px] border-gray-300 flex flex-col md:flex-row md:justify-between gap-1 text-sm font-thin text-[#363636] py-2 px-6  md:px-32">
             <p className="text-sm font-light text-[#363636]">
               © Copyright 2021. All Rights Reserved.
             </p>

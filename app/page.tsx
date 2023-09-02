@@ -1,6 +1,7 @@
 import Image from "next/image";
-import RootLayout from "./layout";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
+import {HiOutlineMenu} from 'react-icons/hi'
 
 type INavItem = {
   title: string;
@@ -33,20 +34,20 @@ const navItem: INavItem[] = [
 export default function Home() {
   return (
     <div className="bg-[url('../public/bnr-bg-home.png')] bg-no-repeat bg-cover">
-      <div className="text-sm text-[#F5F5F5] flex justify-between py-4 px-6 md:px-20">
+      <div className="text-sm text-[#F5F5F5] flex flex-col md:flex-row gap-2 md:justify-between py-4 px-6 md:px-32">
         <p className=" text-[#F5F5F5]">
           950 Boardwalk Suite 305, San Marcos, CA 92078
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-4">
           <p className=" text-[#F5F5F5]">+ 234 816 6628 857</p>
           <p className=" text-[#F5F5F5]">rexpert@gmail.com</p>
         </div>
       </div>
 
-      <div className="bg-white h-[73px] flex justify-between items-center  px-6 md:px-20">
+      <div className="bg-white h-[73px] flex justify-between items-center  px-6 md:px-32">
         <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
-        <div>
-          <ul className="flex gap-4">
+        <div className="flex gap-4 items-center">
+          <ul className="md:flex gap-4 hidden">
             {navItem.map((item) => {
               const { title, url } = item;
               return (
@@ -56,9 +57,37 @@ export default function Home() {
               );
             })}
           </ul>
+          <HiOutlineMenu className='md:hidden text-2xl mr-3'/>
+          <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden md:block">
+            Free Risk Assessment
+          </button>
         </div>
       </div>
-      <div>hello</div>
+      <div className="grid grid-cols-1  md:grid-cols-2 md:px-32 px-6 mt-8 items-center">
+        <div className="text-white flex flex-col items-end">
+          <div className="flex gap-2 items-center">
+            <Image src="/line-1.png" alt="line" width={95} height={0} />
+            <p className="font-extralight">RISK MITIGATION</p>
+          </div>
+          <div>
+            <h1 className="md:text-[104px] text-[80px] font-semibold -mt-8">Solutions</h1>
+            <h1 className="text-[44px] font-light -mt-8">
+              Are Our Top{" "}
+              <span className="text-[#62BB45] font-semibold">Priority</span>
+            </h1>
+            <p className="md:w-[455px] text-white text-lg font-medium">
+              How well does your health care organization prevent controlled
+              substance drug diversion?
+            </p>
+            <button className="flex items-center gap-2 px-6 py-2 mt-5 rounded-full border text-white border-white">
+              Readmore <BsArrowRight />{" "}
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <Image src="/img-1.png" alt="main" width={318} height={540} />
+        </div>
+      </div>
     </div>
   );
 }
