@@ -143,7 +143,7 @@ export default function Home() {
             </h3>
             <p className="max-w-[398px] mb-6">
               Please complete the details below and then click on submit and
-              we'll be in contact
+              we will be in contact
             </p>
             <form className="flex flex-col gap-5">
               <FormRow placeholder="Your Name..." />
