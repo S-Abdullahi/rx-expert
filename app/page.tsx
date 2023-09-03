@@ -4,6 +4,8 @@ import { HiOutlineMenu } from "react-icons/hi";
 import Button from "./components/button";
 import SectionTitle from "./components/SectionTitle";
 import FormRow from "./components/FormRow";
+import SectionImageDetails from "./components/sectionImageDetail";
+import { solutionSectionData } from "./section data/homepage.data";
 
 type INavItem = {
   title: string;
@@ -189,12 +191,27 @@ export default function Home() {
           </div>
         </div>
         <div>
-        <Image
-            src="/group-image-1.png"
-            alt="barometer"
-            width={673}
-            height={706}
-          />
+          {solutionSectionData.map((data, index) => {
+            const {
+              imageSrc,
+              imageAlt,
+              titlePlain,
+              titleColored,
+              description,
+              
+            } = data;
+            return (
+              <SectionImageDetails
+                key={imageSrc}
+                imageSrc={imageSrc}
+                imageAlt={imageAlt}
+                titlePlain={titlePlain}
+                titleColored={titleColored}
+                description={description}
+                order={index}
+              />
+            );
+          })}
         </div>
       </section>
     </div>
