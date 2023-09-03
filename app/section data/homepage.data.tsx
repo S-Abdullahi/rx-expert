@@ -4,7 +4,7 @@ export const solutionSectionData: ISectionImageDetail[] = [
   {
     imageSrc: "/group-image-1.png",
     imageAlt: "barometer",
-    titlePlain: "Audit On Current State of ",
+    titlePlain: "Audit On Current State of",
     titleColored: "Diversion Mitigation Program",
     description:
       "A comprehensive on-site review of your current processes is necessary to identify areas of risk. A comprehensive drug diversion prevention and monitoring program must look for ways to improve controlled substance security, thereby minimizing the avenues for diversion.",

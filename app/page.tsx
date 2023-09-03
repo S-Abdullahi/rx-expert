@@ -169,7 +169,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[url('/bng-industries-3.png')] bg-no-repeat bg-cover px-6 lg:px-32 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
           <div>
             <SectionTitle
               sectionName="OUR SOLUTIONS"
@@ -190,7 +190,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div>
+        <div className="gap-3">
           {solutionSectionData.map((data, index) => {
             const {
               imageSrc,
@@ -208,7 +208,7 @@ export default function Home() {
                 titlePlain={titlePlain}
                 titleColored={titleColored}
                 description={description}
-                order={index}
+                order={index+1}
               />
             );
           })}
