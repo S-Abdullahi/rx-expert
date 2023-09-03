@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import Image from "next/image";
-import { BsArrowRight } from "react-icons/bs";
 import Button from "./components/button";
 
 const inter = Inter({ subsets: ["latin"] });

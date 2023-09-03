@@ -17,13 +17,13 @@ export default function SectionTitle(props: ISectionTitle) {
           <Image src="/line-gray.jpg" alt="line" width={95} height={0} />
           <p className="font-light text-[20px] md:text-[26px]">{sectionName}</p>
         </div>
-        <h1 className="text-[50px] md:text-[76px] font-semibold -mt-5 text-[#0F468E]">
+        <h1 className="text-[40px] md:text-[50px] lg:text-[55px] font-semibold -mt-5 md:-mt-6 text-[#0F468E]">
           {sectionHead}
         </h1>
       </div>
 
       <div>
-        <h1 className="text-[20px] md:text-[28px] font-light -mt-4 md:-mt-7 leading-7 md:leading-[45px]">
+        <h1 className="text-[20px] md:text-[28px] font-light -mt-3 md:-mt-4 leading-7 md:leading-[45px]">
           {sectionTertiary}
           <span className="text-[#0F468E] font-semibold">
              &nbsp;{sectionTertiaryEmphasis}

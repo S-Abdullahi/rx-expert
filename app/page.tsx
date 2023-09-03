@@ -87,7 +87,11 @@ export default function Home() {
                 How well does your health care organization prevent controlled
                 substance drug diversion?
               </p>
-              <Button buttonText="Read More" type="read more" />
+              <Button
+                buttonText="Read More"
+                variant="outlined"
+                themeColor="primary"
+              />
             </div>
           </div>
           <div className="flex justify-center">
@@ -130,6 +134,7 @@ export default function Home() {
             <Button
               buttonText="Connect with Terri on Linkedin!"
               variant="outlined"
+              themeColor="tertiary"
             />
           </div>
         </div>
@@ -142,8 +147,8 @@ export default function Home() {
               </span>
             </h3>
             <p className="max-w-[398px] mb-6 text-[#363636]">
-              Please complete the details below and then click on submit and
-              we will be in contact
+              Please complete the details below and then click on submit and we
+              will be in contact
             </p>
             <form className="flex flex-col gap-5">
               <FormRow placeholder="Your Name..." />
@@ -159,6 +164,37 @@ export default function Home() {
               </div>
             </form>
           </div>
+        </div>
+      </section>
+      <section className="bg-[url('/bng-industries-3.png')] bg-no-repeat bg-cover px-6 lg:px-32 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <SectionTitle
+              sectionName="OUR SOLUTIONS"
+              sectionHead="Why Choose Us"
+              sectionTertiary="Where Can"
+              sectionTertiaryEmphasis="We Help You"
+            />
+            <p className="mt-3">
+              Rxpert Solutions gives you access to a pharmacist with years of
+              hospital pharmacy experience, an outside perspective, and a
+              passion for finding practical and lasting solutions to improving
+              medication safety.
+            </p>
+            <Button
+              buttonText="Read More About Rxpert Solutions Consulting Solutions"
+              variant="outlined"
+              themeColor="tertiary"
+            />
+          </div>
+        </div>
+        <div>
+        <Image
+            src="/group-image-1.png"
+            alt="barometer"
+            width={673}
+            height={706}
+          />
         </div>
       </section>
     </div>
