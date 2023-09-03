@@ -104,7 +104,7 @@ export default function Home() {
             sectionTertiaryEmphasis="Rxpert Solutions"
           />
           <div className="column-1 sm:columns-2 gap-8 mt-4">
-            <p>
+            <p className="text-[#363636]">
               Theresa “Terri” has been a pharmacist for over 35 years, with 15
               years of experience in medication safety and drug diversion
               monitoring. Her background includes work in various clinical
@@ -141,7 +141,7 @@ export default function Home() {
                 Appointment
               </span>
             </h3>
-            <p className="max-w-[398px] mb-6">
+            <p className="max-w-[398px] mb-6 text-[#363636]">
               Please complete the details below and then click on submit and
               we will be in contact
             </p>
