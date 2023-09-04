@@ -7,11 +7,11 @@ import Button from "./components/button";
 const inter = Inter({ subsets: ["latin"] });
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: '100'
-})
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: "100",
+});
 
 export const metadata: Metadata = {
   title: "Rx-Expert website",
@@ -109,8 +109,11 @@ export default function RootLayout({
               <p className="mb-4">
                 Sign up to get new exclusive offers from our latest solutions
               </p>
-              <input placeholder="Enter Your Email" className="shadow-sm font-light rounded p-2 text-sm mb-4 w-full h-[49px] border-[0.5px] border-gray-200" />
-              <Button buttonText="Submit" type="submit"/>
+              <input
+                placeholder="Enter Your Email"
+                className="shadow-sm font-light rounded p-2 text-sm mb-4 w-full h-[49px] border-[0.5px] border-gray-200"
+              />
+              <Button buttonText="Submit" type="submit" />
             </div>
           </div>
           <div className="border-t-[1px] border-gray-300 flex flex-col md:flex-row md:justify-between gap-1 text-sm font-thin text-[#363636] py-2 px-6  lg:px-32">

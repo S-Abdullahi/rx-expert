@@ -6,6 +6,7 @@ import SectionTitle from "./components/SectionTitle";
 import FormRow from "./components/FormRow";
 import SectionImageDetails from "./components/sectionImageDetail";
 import { solutionSectionData } from "./section data/homepage.data";
+import Reveal from "./components/reveal";
 
 type INavItem = {
   title: string;
@@ -81,19 +82,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h1 className="text-[28px] sm:text-[35px] lg:text-[44px] font-light -mt-4 md:-mt-7 leading-7 md:leading-[45px]">
-                Are Our Top{" "}
-                <span className="text-[#62BB45] font-semibold">Priority</span>
-              </h1>
-              <p className="max-w-[455px] text-white text-base md:text-lg font-medium mt-4">
-                How well does your health care organization prevent controlled
-                substance drug diversion?
-              </p>
-              <Button
-                buttonText="Read More"
-                variant="outlined"
-                themeColor="primary"
-              />
+              <div>
+                <h1 className="text-[28px] sm:text-[35px] lg:text-[44px] font-light -mt-4 md:-mt-7 leading-7 md:leading-[45px]">
+                  Are Our Top{" "}
+                  <span className="text-[#62BB45] font-semibold">Priority</span>
+                </h1>
+                <p className="max-w-[455px] text-white text-base md:text-lg font-medium mt-4">
+                  How well does your health care organization prevent controlled
+                  substance drug diversion?
+                </p>
+                <Button
+                  buttonText="Read More"
+                  variant="outlined"
+                  themeColor="primary"
+                />
+              </div>
             </div>
           </div>
           <div className="flex justify-center">
@@ -198,7 +201,6 @@ export default function Home() {
               titlePlain,
               titleColored,
               description,
-              
             } = data;
             return (
               <SectionImageDetails
@@ -208,10 +210,29 @@ export default function Home() {
                 titlePlain={titlePlain}
                 titleColored={titleColored}
                 description={description}
-                order={index+1}
+                order={index + 1}
               />
             );
           })}
+        </div>
+      </section>
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-[#F3F3F3]">
+        <Image
+          src="/img-2.png"
+          alt="Joint admission"
+          width={705}
+          height={468}
+        />
+        <div className="px-4 md:px-0 pb-4 md:pb-0">
+          <p className="max-w-[580px] font-light text-[22px] md:text-[26px] text-[#363636]">
+            The Joint Commission has named improving medication safety as a
+            National Patient Safety Goal.
+          </p>
+          <Button
+            buttonText="Read More"
+            variant="outlined"
+            themeColor="tertiary"
+          />
         </div>
       </section>
     </div>

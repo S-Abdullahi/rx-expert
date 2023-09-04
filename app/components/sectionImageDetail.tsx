@@ -14,9 +14,8 @@ export default function SectionImageDetails(props: ISectionImageDetail) {
   const { imageSrc, imageAlt, titlePlain, titleColored, description, order } =
     props;
   const isEven: boolean = (order as number) % 2 === 0;
-  console.log(isEven)
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 md:mb-0 md:gap-10 md:-my-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 lg:mb-0 md:gap-10 md:-my-8">
       <Image
         src={imageSrc}
         alt={imageAlt}
