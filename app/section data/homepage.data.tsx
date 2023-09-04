@@ -26,3 +26,30 @@ export const solutionSectionData: ISectionImageDetail[] = [
       "Much time and energy may be devoted to monitoring for drug diversion, and once suspected, even more time to gathering data and reviewing audit findings. Unfortunately, the findings may then be turned over to someone who lacks experience or skill at conducting an interview.",
   },
 ];
+
+interface IReview {
+  comment: string;
+  name: string;
+  qualification: string;
+}
+
+export const ReviewData: IReview[] = [
+  {
+    comment:
+      "Terri is absolutely phenomenal. She is an incredibly knowledgeable pharmacy resource. As the medication safety officer, the quality initiatives she implemented not only impacted the patients at our medical center but also reached into the community. Terri is a genuine professional who upholds accountability while creating community among her team members. She is a great listener to identify friction points and has actionable ideas to implement improvements.",
+    name: "Lab",
+    qualification: "T. Eagle. MBA, MLS(ASCP), CLS Lab Operations Manager",
+  },
+  {
+    comment:
+      "Terri is an expert at prospective risk identification -Failure, Mode and Effects Analysis (FMEA). Terri participated in CHPSO Patient Safety Safe Tables and was part of the Hospital Quality Institute’s Regional Quality and Patient Safety Leader Network.  She is an excellent public speaker and communicates well with public and professional audiences. I look forward to her continued work in medication safety.",
+    name: "Regional Quality Network at HQI",
+    qualification: "A. Munoz, FACHE, CPHQ, CPPS VP",
+  },
+  {
+    comment:
+      "In addition to understanding the ins and outs of the [controlled substance use] process completely, she is very proactive in coming to me with provider issues that she detects. She truly balances the administrative duties and the regulatory components demand with a keen sense of what my practitioners do and what their needs are on the ground. Terri is instrumental in working with my department, balancing patient care, cooperation, ability, and integrity to get the job done.",
+    name: "UCSD Medical Center",
+    qualification: "Chief Anesthesiologist",
+  },
+];
