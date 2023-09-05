@@ -314,7 +314,7 @@ export default function Home() {
                 description,
               } = data;
               return (
-                <div className="text-white">
+                <div className="text-white" key={imgSrc}>
                   <Image
                     src={imgSrc}
                     alt={tertiaryText}
