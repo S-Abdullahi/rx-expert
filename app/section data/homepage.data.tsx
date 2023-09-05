@@ -53,3 +53,34 @@ export const ReviewData: IReview[] = [
     qualification: "Chief Anesthesiologist",
   },
 ];
+
+interface IWhereToHelp {
+  imgSrc: string;
+  tertiaryText: string;
+  emphasisTertiaryText: string;
+  description: string;
+}
+
+export const WhereToHelpData: IWhereToHelp[] = [
+  {
+    imgSrc: "/rx-1.png",
+    tertiaryText: "Patient",
+    emphasisTertiaryText: "Safety Risk",
+    description:
+      "Patient Safety is THE priority. Without a dynamic program that is constantly reviewing medication management pathways and practices within the facility, patients are exposed to greater risk.",
+  },
+  {
+    imgSrc: "/rx-2.png",
+    tertiaryText: "Staff",
+    emphasisTertiaryText: "Risk",
+    description:
+      "The different disciplines within a facility work as a team. If a member of the team is not following safe medication practice or is engaged in drug diversion, the whole team is at risk.",
+  },
+  {
+    imgSrc: "/rx-3.png",
+    tertiaryText: "Facility",
+    emphasisTertiaryText: "Risk",
+    description:
+      "The facility holds the liability. Is your facility doing all it can to mitigate the risk to itself and ultimately the patient?",
+  }
+];

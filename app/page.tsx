@@ -8,6 +8,7 @@ import SectionImageDetails from "./components/sectionImageDetail";
 import { solutionSectionData } from "./section data/homepage.data";
 import Reveal from "./components/reveal";
 import { ReviewData } from "./section data/homepage.data";
+import { WhereToHelpData } from "./section data/homepage.data";
 
 type INavItem = {
   title: string;
@@ -244,12 +245,12 @@ export default function Home() {
           sectionTertiary="Awesome"
           sectionTertiaryEmphasis="Tertiary"
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5 md:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 mt-5 md:mt-10">
           {ReviewData.map((review, index) => {
             const { comment, name, qualification } = review;
             return (
               <div
-                className="flex items-start gap-3 max-w-[333px]"
+                className="flex items-start gap-3 md:max-w-[333px]"
                 key={`${name}-${index}`}
               >
                 <Image
@@ -288,6 +289,64 @@ export default function Home() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="bg-[#0F468E] py-8">
+        <div className="px-6 lg:px-32 ">
+          <SectionTitle
+            sectionName="WHERE CAN WE HELP YOU"
+            sectionHead="Get Your Business"
+            sectionTertiary="Right Up"
+            sectionTertiaryEmphasis="There"
+            textColorTwo="secondary"
+            textColorThree="accent"
+            textColorOne="secondary"
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 pl-6 pr-6 lg:pr-0 lg:pl-32 gap-6">
+          <div className="md:col-span-3 order-2 md:order-1 grid grid-cols-1 sm:grid-cols-3 mt-14 gap-10 sm:gap-4">
+            {WhereToHelpData.map((data) => {
+              const {
+                imgSrc,
+                tertiaryText,
+                emphasisTertiaryText,
+                description,
+              } = data;
+              return (
+                <div className="text-white">
+                  <Image
+                    src={imgSrc}
+                    alt={tertiaryText}
+                    width={76}
+                    height={76}
+                    className="w-[50px] md:w-[76px]"
+                  />
+                  <h4 className="text-2xl  font-light mt-4 mb-2">
+                    {tertiaryText}{" "}
+                    <span className="font-semibold">
+                      {emphasisTertiaryText}
+                    </span>
+                  </h4>
+                  <p className="md:max-w-[266px] font-light">{description}</p>
+                  <Button
+                    buttonText="Read More"
+                    variant="outlined"
+                    themeColor="primary"
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="md:col-span-2 order-1 md:order-2 mt-10 md:mt-0 flex justify-center sm:block">
+            <Image
+              src="/rx-img-1.png"
+              alt="experiment"
+              width={532}
+              height={463}
+              className="w-full"
+            />
+          </div>
         </div>
       </section>
     </div>
