@@ -47,7 +47,12 @@ export default function SectionTitle(props: ISectionTitle) {
     >
       <div className="flex flex-col items-end">
         <div className="flex gap-2 items-center ">
-          <Image src="/line-gray.jpg" alt="line" width={95} height={0} />
+          <Image
+            src={`${textColorOne ? "/line-1.png" : "/line-gray.jpg"}`}
+            alt="line"
+            width={95}
+            height={0}
+          />
           <p className="font-light text-[20px] md:text-[26px]">{sectionName}</p>
         </div>
         <h1
