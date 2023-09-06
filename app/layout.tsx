@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import Image from "next/image";
 import Button from "./components/button";
+import SectionTitle from "./components/SectionTitle";
+import FormRow from "./components/FormRow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +55,41 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable}`}>
         {children}
+        <section className="px-6 lg:px-32 py-12 bg-[#F5F5F5]">
+          <SectionTitle sectionName="CONTACT US" sectionHead="Get In Touch" />
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <form className="flex flex-col gap-4 max-w-[516px]">
+              <FormRow
+                placeholder="
+            Full Name..."
+              />
+              <FormRow
+                placeholder="
+            Phone No..."
+              />
+              <FormRow
+                placeholder="
+            Email Address..."
+              />
+              <FormRow
+                placeholder="
+            Subject..."
+              />
+              <FormRow
+                placeholder="
+            Full Name..."
+              />
+              <textarea
+                placeholder="Feedback/Query"
+                className="border-[0.5px] px-2 py-2 rounded text-sm font-light focus:outline-0 focus:border-[#0F468E]"
+              ></textarea>
+              <div>
+                <Button buttonText="Submit" variant="contained" />
+              </div>
+            </form>
+            <div></div>
+          </div>
+        </section>
         <footer>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-6  lg:mx-32 my-12">
             <div className="flex flex-col gap-3">

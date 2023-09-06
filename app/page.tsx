@@ -30,7 +30,7 @@ const navItem: INavItem[] = [
   },
   {
     title: "Resources",
-    url: "/about",
+    url: "/blog",
   },
   {
     title: "Contact Us",
@@ -347,6 +347,31 @@ export default function Home() {
               className="w-full"
             />
           </div>
+        </div>
+      </section>
+
+      {/* OUR BLOG SESSION */}
+      <section className="px-6 lg:px-32 py-16">
+        <SectionTitle
+          sectionName="OUR BLOG"
+          sectionHead="See Our Latest Blog"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className=" rounded-[20px] overflow-hidden">
+            <div className="bg-[url('/img-5.png')] bg-no-repeat bg-cover h-[400px] w-[400px]">
+              <div>
+                <p>
+                  How does the DEA define significant loss? That is a question
+                  many of you who oversee controlled substances have asked over
+                  the years.
+                </p>
+                <Button buttonText="Read More" />
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+          <div></div>
         </div>
       </section>
     </div>

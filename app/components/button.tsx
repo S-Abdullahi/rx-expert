@@ -12,7 +12,7 @@ export default function Button(prop: IButton) {
   let buttonbg;
   if (variant === "outlined") {
     if (themeColor === "tertiary") {
-      buttonbg = "bg-transparent text-[##363636] border-[#363636]";
+      buttonbg = "bg-transparent text-[#363636] border-[#363636]";
     } else if (themeColor === "primary") {
       buttonbg = "bg-transparent text-white border-white";
     }

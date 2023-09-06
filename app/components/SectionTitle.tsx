@@ -3,11 +3,12 @@ import Image from "next/image";
 type ISectionTitle = {
   sectionName: string;
   sectionHead: string;
-  sectionTertiary: string;
-  sectionTertiaryEmphasis: string;
+  sectionTertiary?: string;
+  sectionTertiaryEmphasis?: string;
   textColorOne?: "primary" | "secondary" | "tertiary" | "accent";
   textColorTwo?: "primary" | "secondary" | "tertiary" | "accent";
   textColorThree?: "primary" | "secondary" | "tertiary" | "accent";
+  size?: "small" | "medium" | "large";
 };
 
 const textColorFn = (color: string) => {
@@ -37,8 +38,20 @@ export default function SectionTitle(props: ISectionTitle) {
     textColorOne,
     textColorTwo,
     textColorThree,
+    size,
   } = props;
 
+  let textSize;
+  switch (size) {
+    case "small":
+      textSize = "text-sm";
+      break;
+    case "medium":
+      textSize = "text-lg";
+      break;
+    case "large":
+      textSize = "text-[55px]";
+  }
   return (
     <div
       className={`${
