@@ -25,6 +25,30 @@ export const solutionSectionData: ISectionImageDetail[] = [
     description:
       "Much time and energy may be devoted to monitoring for drug diversion, and once suspected, even more time to gathering data and reviewing audit findings. Unfortunately, the findings may then be turned over to someone who lacks experience or skill at conducting an interview.",
   },
+  {
+    imageSrc: "/group-image-4.png",
+    imageAlt: "stethoscope",
+    titlePlain: "Controlled Substance",
+    titleColored: "Drug Diversion Program Development",
+    description:
+      "Federal and state laws address the need for controlled substance monitoring and reporting of loss or theft. Every facility needs to know where all of the controlled substances are at any given time and have a process in place to confirm that there are no losses or thefts.",
+  },
+  {
+    imageSrc: "/group-image-5.png",
+    imageAlt: "docture",
+    titlePlain: "Medication",
+    titleColored: "Safety",
+    description:
+      "While Medication Safety is a broad topic, it is nonetheless crucial and must be considered at all times.Rxpert Solutions offers risk assessments on the medication use process. We provide a pharmacist who has been through MERP and GACH surveys and who will review and offer suggestions",
+  },
+  {
+    imageSrc: "/group-image-6.png",
+    imageAlt: "laboratory",
+    titlePlain: "Pharmacy",
+    titleColored: "Regulatory Compliance",
+    description:
+      "If you\’ve been cited by a regulatory body and are in need of assistance with correction, Rxpert Solutions can serve as your independent pharmacist consultant.In many states an independent consultant is a requirement if the facility or pharmacist-in-charge is placed on probation. Depending on state licensing requirements, Rxpert Solution can fill the role of that consultant.",
+  },
 ];
 
 interface IReview {

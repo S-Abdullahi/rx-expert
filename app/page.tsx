@@ -178,7 +178,7 @@ export default function Home() {
           </div>
         </div>
         <div className="gap-3">
-          {solutionSectionData.map((data, index) => {
+          {solutionSectionData.slice(0,3).map((data, index) => {
             const {
               imageSrc,
               imageAlt,
