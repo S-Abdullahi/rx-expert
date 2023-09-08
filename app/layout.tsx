@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "./components/button";
 import SectionTitle from "./components/SectionTitle";
 import FormRow from "./components/FormRow";
+import NavBar from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,3 +1,9 @@
+import Header from "../components/Header";
+
 export default function Contact() {
-  return <h1 className="">Contact</h1>;
+  return (
+    <div>
+      <Header title="Contact Us" label="contact" />
+    </div>
+  );
 }

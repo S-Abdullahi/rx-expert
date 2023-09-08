@@ -1,3 +1,13 @@
+import Header from "../components/Header";
+
 export default function Diversion() {
-  return <h1 className="">Diversion Page</h1>;
+  return (
+    <div>
+      <Header
+        title="Diversion Mitigation Program"
+        label="Solution"
+        secondLabel="Diversion Mitigation Program"
+      />
+    </div>
+  );
 }

@@ -10,6 +10,7 @@ import Reveal from "./components/reveal";
 import { ReviewData } from "./section data/homepage.data";
 import { WhereToHelpData } from "./section data/homepage.data";
 import BlogCard from "./components/BlogCard";
+import NavBar from "./components/NavBar";
 
 type INavItem = {
   title: string;
@@ -80,7 +81,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
+        <NavBar />
+
+        {/* <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
           <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
           <div className="flex gap-4 items-center">
             <ul className="md:flex gap-4 hidden">
@@ -98,7 +101,7 @@ export default function Home() {
               Free Risk Assessment
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:px-32 px-6 mt-8 items-center gap-3">
           <div className="text-white flex flex-col items-start">
             <div className="flex flex-col items-end">

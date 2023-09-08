@@ -1,3 +1,8 @@
+import Header from "../components/Header";
 export default function Solution() {
-  return <h1 className="">Solution Page</h1>;
+  return (
+    <div>
+      <Header title="Solutions" label="solutions"/>
+    </div>
+  );
 }

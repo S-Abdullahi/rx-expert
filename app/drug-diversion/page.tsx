@@ -1,3 +1,13 @@
-export default function Drugdiversion(){
-    return <h1 className="">Drug Diversion Page</h1>
-  }
+import Header from "../components/Header";
+
+export default function Drugdiversion() {
+  return (
+    <div>
+      <Header
+        title="Drug Diversion"
+        label="solution"
+        secondLabel="drug diversion"
+      />
+    </div>
+  );
+}
