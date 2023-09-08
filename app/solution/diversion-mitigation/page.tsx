@@ -86,7 +86,7 @@ export default function Diversion() {
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {relatedServiceDetails.map((data)=>{
-            return <ServiceCard {...data}/>
+            return <ServiceCard {...data} key={data.previewText}/>
           })}
         </div>
       </section>
