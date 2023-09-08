@@ -9,6 +9,7 @@ import { solutionSectionData } from "./section data/homepage.data";
 import Reveal from "./components/reveal";
 import { ReviewData } from "./section data/homepage.data";
 import { WhereToHelpData } from "./section data/homepage.data";
+import BlogCard from "./components/BlogCard";
 
 type INavItem = {
   title: string;
@@ -35,6 +36,33 @@ const navItem: INavItem[] = [
   {
     title: "Contact Us",
     url: "/contact",
+  },
+];
+
+const blogDetail = [
+  {
+    imageUrl: "/img-3.png",
+    day: "05",
+    month: "NOV",
+    newsHeadline: "Significant Loss",
+    newsPreview:
+      "How does the DEA define significant loss? That is a question many of you who oversee controlled substances have asked over the years.",
+  },
+  {
+    imageUrl: "/img-4.png",
+    day: "10",
+    month: "DEC",
+    newsHeadline: "Another Life lost ",
+    newsPreview:
+      "There has been a lot of chatter on list serves within the diversion prevention.",
+  },
+  {
+    imageUrl: "/img-4.png",
+    day: "16",
+    month: "DEC",
+    newsHeadline: "Mitigating Diversion",
+    newsPreview:
+      "I recently read a blog  by Dennis Tribble, a fellow pharmacist and IHFDA member,",
   },
 ];
 
@@ -357,21 +385,9 @@ export default function Home() {
           sectionHead="See Our Latest Blog"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className=" rounded-[20px] overflow-hidden">
-            <div className="bg-[url('/img-5.png')] bg-no-repeat bg-cover h-[400px] w-[400px]">
-              <div>
-                <p>
-                  How does the DEA define significant loss? That is a question
-                  many of you who oversee controlled substances have asked over
-                  the years.
-                </p>
-                <Button buttonText="Read More" />
-              </div>
-            </div>
-          </div>
-
-          <div></div>
-          <div></div>
+          {blogDetail.map((detail) => {
+            return <BlogCard key={detail.newsHeadline} {...detail} />;
+          })}
         </div>
       </section>
     </div>
