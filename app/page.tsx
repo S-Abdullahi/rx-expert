@@ -12,34 +12,6 @@ import { WhereToHelpData } from "./section data/homepage.data";
 import BlogCard from "./components/BlogCard";
 import NavBar from "./components/NavBar";
 
-type INavItem = {
-  title: string;
-  url: string;
-};
-
-const navItem: INavItem[] = [
-  {
-    title: "Home",
-    url: "/",
-  },
-  {
-    title: "About Us",
-    url: "/about",
-  },
-  {
-    title: "Solutions",
-    url: "/solution",
-  },
-  {
-    title: "Resources",
-    url: "/blog",
-  },
-  {
-    title: "Contact Us",
-    url: "/contact",
-  },
-];
-
 const blogDetail = [
   {
     imageUrl: "/img-3.png",
@@ -80,28 +52,7 @@ export default function Home() {
             <p className=" text-[#F5F5F5]">rexpert@gmail.com</p>
           </div>
         </div>
-
         <NavBar />
-
-        {/* <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
-          <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
-          <div className="flex gap-4 items-center">
-            <ul className="md:flex gap-4 hidden">
-              {navItem.map((item) => {
-                const { title, url } = item;
-                return (
-                  <li key={title}>
-                    <Link href={url}>{title}</Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <HiOutlineMenu className="md:hidden text-2xl mr-3" />
-            <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden lg:block">
-              Free Risk Assessment
-            </button>
-          </div>
-        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:px-32 px-6 mt-8 items-center gap-3">
           <div className="text-white flex flex-col items-start">
             <div className="flex flex-col items-end">

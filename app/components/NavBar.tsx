@@ -13,16 +13,17 @@ const navItem: INavItem[] = [
     url: "/",
   },
   {
-    title: "About Us",
-    url: "/about",
-  },
-  {
     title: "Solutions",
     url: "/solution",
   },
+
   {
     title: "Resources",
     url: "/blog",
+  },
+  {
+    title: "About Us",
+    url: "/about",
   },
   {
     title: "Contact Us",
@@ -35,16 +36,14 @@ export default function NavBar() {
     <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
       <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
       <div className="flex gap-4 items-center">
-        <ul className="md:flex gap-4 hidden">
+        <div className="md:flex gap-4 hidden">
           {navItem.map((item) => {
             const { title, url } = item;
             return (
-              <li key={title}>
-                <Link href={url}>{title}</Link>
-              </li>
+                <Link href={url} key={title}>{title}</Link>
             );
           })}
-        </ul>
+        </div>
         <HiOutlineMenu className="md:hidden text-2xl mr-3" />
         <button className="text-white bg-[#0F468E] px-3 py-1 rounded-md hidden lg:block">
           Free Risk Assessment
