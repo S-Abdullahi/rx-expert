@@ -29,19 +29,19 @@ type blogData = {
 
 const footerBlogData: blogData[] = [
   {
-    imageUrl: "/blog-small-image-1.svg",
+    imageUrl: "/img-3.png",
     title: "Another Life lost",
     description:
       "There has been a lot of chatter on list serves withing the diversion",
   },
   {
-    imageUrl: "/blog-small-image-2.svg",
+    imageUrl: "/img-2.png",
     title: "Another Life lost",
     description:
       "Unintentionally, when talking about addiction, many people use language.",
   },
   {
-    imageUrl: "/blog-small-image-3.svg",
+    imageUrl: "/img-3.png",
     title: "Another Life lost",
     description: "I recently heard a conference speaker, Maureen Burger, talk",
   },
@@ -119,21 +119,21 @@ export default function RootLayout({
                   return (
                     <article
                       key={title}
-                      className="flex flex-col md:flex-row items-start mb-1"
+                      className="flex flex-col md:flex-row items-center mb-1 gap-2"
                     >
                       <Image
                         src={imageUrl}
                         alt={title}
                         width={106}
-                        height={92}
-                        className="object-contain"
+                        height={98}
+                        className="object-contain rounded-md"
                       />
 
                       <div>
                         <h5 className="text-[#0F468E] font-semibold">
                           {title}
                         </h5>
-                        <p className="max-w-[342px] text-base">{description}</p>
+                        <p className="max-w-[342px] text-base leading-5">{description}</p>
                         <button className="text-xs font-bold">Read More</button>
                       </div>
                     </article>
