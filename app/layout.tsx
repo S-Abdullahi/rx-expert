@@ -6,6 +6,7 @@ import Button from "./components/button";
 import SectionTitle from "./components/SectionTitle";
 import FormRow from "./components/FormRow";
 import NavBar from "./components/NavBar";
+import { AppProvider } from "./Context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable}`}>
-        {children}
+        <AppProvider>{children}</AppProvider>
         <section className="px-6 lg:px-32 py-12 bg-[#F5F5F5]">
           <SectionTitle sectionName="CONTACT US" sectionHead="Get In Touch" />
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -119,7 +120,7 @@ export default function RootLayout({
                   return (
                     <article
                       key={title}
-                      className="flex flex-col md:flex-row items-center mb-1 gap-2"
+                      className="flex flex-col md:flex-row md:items-center mb-1 gap-2"
                     >
                       <Image
                         src={imageUrl}
@@ -133,7 +134,9 @@ export default function RootLayout({
                         <h5 className="text-[#0F468E] font-semibold">
                           {title}
                         </h5>
-                        <p className="max-w-[342px] text-base leading-5">{description}</p>
+                        <p className="max-w-[342px] text-base leading-5">
+                          {description}
+                        </p>
                         <button className="text-xs font-bold">Read More</button>
                       </div>
                     </article>

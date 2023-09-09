@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Header from "../components/Header";
-import SubSectionTitle from "../components/SubSectionTitle";
-import Button from "../components/button";
-import CommentSection from "../components/CommentSection";
+import Header from "../../components/Header";
+import SubSectionTitle from "../../components/SubSectionTitle";
+import Button from "../../components/button";
+import CommentSection from "../../components/CommentSection";
 
 export default function Drugdiversion() {
   return (
@@ -93,7 +93,7 @@ export default function Drugdiversion() {
             </p>
           </div>
         </div>
-        <div className="p-4 bg-[#F5F5F5]">
+        <div className="p-4 bg-[#F5F5F5] border-b-[5px] border-[#0F468E]">
           <p className="font-light text-[#363636]">
             I hired Terri (lead pharmacy consultant for Rxpert Solutions) to
             develop a controlled substance monitoring program for our 397 bed
