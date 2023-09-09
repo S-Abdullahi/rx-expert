@@ -5,6 +5,7 @@ import SubSectionTitle from "@/app/components/SubSectionTitle";
 import Button from "@/app/components/button";
 import ServiceCard from "@/app/components/ServiceCard";
 import { IServiceCard } from "@/app/components/ServiceCard";
+import CommentSection from "@/app/components/CommentSection";
 
 const relatedServiceDetails: IServiceCard[] = [
   {
@@ -45,7 +46,7 @@ export default function Diversion() {
         height={657}
       />
       <section className="px-6 lg:px-32 py-16">
-        <div className="-mt-32">
+        <div className="-mt-10 md:-mt-32">
           <SubSectionTitle
             titlePlain="Audit On Current State of"
             titleColored="Diversion Mitigation Program"
@@ -53,28 +54,30 @@ export default function Diversion() {
         </div>
 
         <div className="columns-1 md:columns-2 md:gap-8 lg:gap-16 mt-4">
-          <p className="text-[#363636]">
+          <p className="text-[#363636] text-justify">
             A comprehensive on-site review of your current processes is
             necessary to identify areas of risk. A comprehensive drug diversion
             prevention and monitoring program must look for ways to improve
             controlled substance security, thereby minimizing the avenues for
-            diversion. Rxpert Solutions will evaluate for risk along the entire
-            medication pathway with the goal of improving security and
-            accountability. This includes confirming that solid policies and
-            procedures are in place, policies are being followed, there are
-            checks and balances, and unaccounted for (missing) controlled
-            substances are identified and investigated timely. Observation of
-            workflow is an essential component to understanding where gaps may
-            exist. Staff have expectations for performance, but when was the
-            last time someone observed to see if they are meeting those
-            expectations and following best practice? Poor practice and
-            diversion can often look alike. A risk assessment will bring poor
-            practices to the surface and highlight where work is needed to bring
-            staff into compliance. Improving practice will ultimately make
-            diversion easier to spot. While monitoring healthcare workers who
-            may be diverting controlled substances is important, this gap
-            analysis will give a facility a great overview where improvements in
-            prevention are needed.
+            diversion. <br />
+            <br />
+            Rxpert Solutions will evaluate for risk along the entire medication
+            pathway with the goal of improving security and accountability. This
+            includes confirming that solid policies and procedures are in place,
+            policies are being followed, there are checks and balances, and
+            unaccounted for (missing) controlled substances are identified and
+            investigated timely. Observation of workflow is an essential
+            component to understanding where gaps may exist. <br />
+            <br />
+            Staff have expectations for performance, but when was the last time
+            someone observed to see if they are meeting those expectations and
+            following best practice? Poor practice and diversion can often look
+            alike. A risk assessment will bring poor practices to the surface
+            and highlight where work is needed to bring staff into compliance.
+            Improving practice will ultimately make diversion easier to spot.
+            While monitoring healthcare workers who may be diverting controlled
+            substances is important, this gap analysis will give a facility a
+            great overview where improvements in prevention are needed.
           </p>
         </div>
       </section>
@@ -85,11 +88,12 @@ export default function Diversion() {
           sectionName="OUR SOLUTIONS"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {relatedServiceDetails.map((data)=>{
-            return <ServiceCard {...data} key={data.previewText}/>
+          {relatedServiceDetails.map((data) => {
+            return <ServiceCard {...data} key={data.previewText} />;
           })}
         </div>
       </section>
+      <CommentSection />
     </div>
   );
 }

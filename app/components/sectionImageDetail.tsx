@@ -8,10 +8,11 @@ export type ISectionImageDetail = {
   titleColored: string;
   description: string;
   order?: number | undefined;
+  readmoreUrl?: string;
 };
 
 export default function SectionImageDetails(props: ISectionImageDetail) {
-  const { imageSrc, imageAlt, titlePlain, titleColored, description, order } =
+  const { imageSrc, imageAlt, titlePlain, titleColored, description, order, readmoreUrl } =
     props;
   const isEven: boolean = (order as number) % 2 === 0;
   return (
@@ -33,6 +34,7 @@ export default function SectionImageDetails(props: ISectionImageDetail) {
           buttonText="Read More"
           themeColor="tertiary"
           variant="outlined"
+          url={readmoreUrl}
         />
       </div>
     </div>

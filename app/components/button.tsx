@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 type IButton = {
@@ -5,10 +6,11 @@ type IButton = {
   type?: "read more" | "submit";
   variant?: "outlined" | "contained" | "submit";
   themeColor?: "primary" | "secondary" | "tertiary";
+  url?: string;
 };
 
 export default function Button(prop: IButton) {
-  const { buttonText, type, variant, themeColor } = prop;
+  const { buttonText, type, variant, themeColor, url } = prop;
   let buttonbg;
   if (variant === "outlined") {
     if (themeColor === "tertiary") {
@@ -24,10 +26,12 @@ export default function Button(prop: IButton) {
     buttonbg = "bg-[#62BB45] text-white";
   }
   return (
-    <button
-      className={`flex items-center gap-2 px-6 py-2 mt-5 rounded-full border  ${buttonbg}`}
-    >
-      {buttonText} <BsArrowRight />{" "}
-    </button>
+    <Link href={url || ''}>
+      <button
+        className={`flex items-center gap-2 px-6 py-2 mt-5 rounded-full border  ${buttonbg}`}
+      >
+        {buttonText} <BsArrowRight />{" "}
+      </button>
+    </Link>
   );
 }
