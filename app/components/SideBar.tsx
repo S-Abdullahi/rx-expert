@@ -37,20 +37,31 @@ const navItem: INavItem[] = [
 export default function SideBar() {
   const { isOpen, menuToggle } = useAppContext();
   return (
-    <div className="min-h-screen bg-white min-w-[50%] fixed top-0 left-0 py-10 px-4">
+    <div className={`w-[40%] bg-white fixed top-0 left-0 ${isOpen ? 'h-auto transition-all duration-300 ease-in-out' : '-my-[100%] transition-all duration-300 ease-in-out'} z-10 py-10 px-4`}>
       <div className="flex flex-col">
         {navItem.map((nav) => {
           const { title, url, innerLink } = nav;
           return (
-            <div className=" flex flex-col" key={`${title}-${url}`}>
-              <Link href={url} className="border-b-[0.5px]  py-3 pl-2 w-full" onClick={() => menuToggle()}>
+            <div className=" flex flex-col border-b-[0.5px]  py-3 pl-2" key={`${title}-${url}`}>
+              <Link
+                href={url}
+                className=" w-full"
+                onClick={() => menuToggle()}
+              >
                 {title}
               </Link>
               {innerLink?.map((item) => {
                 const { title, url } = item;
                 return (
-                  <div className="flex flex-col font-light" key={`${title}-${url}`}>
-                    <Link href={url} className="pl-2" onClick={() => menuToggle()}>
+                  <div
+                    className="flex flex-col font-light"
+                    key={`${title}-${url}`}
+                  >
+                    <Link
+                      href={url}
+                      className="pl-2"
+                      onClick={() => menuToggle()}
+                    >
                       {title}
                     </Link>
                   </div>

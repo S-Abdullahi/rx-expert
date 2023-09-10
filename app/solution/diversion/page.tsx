@@ -1,5 +1,5 @@
 import SectionTitle from "@/app/components/SectionTitle";
-import Header from "../../../components/Header";
+import Header from "../../components/Header";
 import Image from "next/image";
 import SubSectionTitle from "@/app/components/SubSectionTitle";
 import Button from "@/app/components/button";

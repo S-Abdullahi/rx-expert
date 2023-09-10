@@ -1,9 +1,11 @@
-'use client'
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineMenu } from "react-icons/hi";
 import { useAppContext } from "../Context";
 import SideBar from "./SideBar";
+import { useRef } from "react";
 
 type INavItem = {
   title: string;
@@ -35,9 +37,34 @@ const navItem: INavItem[] = [
 ];
 
 export default function NavBar() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [navStick, setNavStick] = useState<boolean | null>(null)
+
+  const targettedDiv: HTMLDivElement | null = ref.current;
+  const initialCordinate = targettedDiv?.getBoundingClientRect();
+  
+  function getHeight(){
+    window.addEventListener('scroll', ()=>{
+      const navScrollY: number = window.scrollY
+      if(navScrollY > (initialCordinate?.top as number)){
+          setNavStick(true)
+      }else{
+        setNavStick(false)
+      }
+    })
+  }
+
+  getHeight()
+  React.useEffect(() => {
+    
+  }, []);
+
   const { isOpen, menuToggle } = useAppContext();
   return (
-    <div className="bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32">
+    <div
+      className={`bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32 ${navStick ? 'fixed top-0 left-0 w-full opacity-6 transition-all ease-linear z-20' :  ''}`}
+      ref={ref}
+    >
       <Image src="/rx-logo.svg" alt="logo" width={116} height={61} />
       <div className="flex gap-4 items-center">
         <div className="md:flex gap-4 hidden">
@@ -58,7 +85,7 @@ export default function NavBar() {
           Free Risk Assessment
         </button>
       </div>
-      {isOpen && <SideBar />}
+      <SideBar />
     </div>
   );
 }
