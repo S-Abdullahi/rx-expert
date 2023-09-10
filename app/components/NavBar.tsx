@@ -45,28 +45,28 @@ export default function NavBar() {
 
   function getHeight() {
     if (typeof window !== "undefined") {
-      // Access the window object here
       window.addEventListener("scroll", () => {
         const navScrollY: number = window.scrollY;
-        if (navScrollY > (initialCordinate?.top as number)) {
+        if (navScrollY > (initialCordinate?.bottom as number)) {
           setNavStick(true);
         } else {
           setNavStick(false);
         }
       });
     }
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }
-
   getHeight();
-  React.useEffect(() => {}, []);
 
   const { isOpen, menuToggle } = useAppContext();
   return (
     <div
-      className={`bg-white h-[73px] flex justify-between items-center  px-6 lg:px-32 ${
+      className={`bg-white h-[73px] flex justify-between items-center px-6 lg:px-32 transition-all ease-linear ${
         navStick
-          ? "fixed top-0 left-0 w-full opacity-6 transition-all ease-linear z-20"
-          : ""
+          ? "fixed top-0 left-0 w-full opacity-2 transition-all ease-linear z-20"
+          : "relative"
       }`}
       ref={ref}
     >
