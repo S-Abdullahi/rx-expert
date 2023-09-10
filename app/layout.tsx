@@ -37,13 +37,13 @@ const footerBlogData: blogData[] = [
   },
   {
     imageUrl: "/img-2.png",
-    title: "Another Life lost",
+    title: "Words Matter",
     description:
       "Unintentionally, when talking about addiction, many people use language.",
   },
   {
     imageUrl: "/img-3.png",
-    title: "Another Life lost",
+    title: "The Drug Diversion Trial",
     description: "I recently heard a conference speaker, Maureen Burger, talk",
   },
 ];
