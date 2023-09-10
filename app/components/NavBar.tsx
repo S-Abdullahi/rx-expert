@@ -90,7 +90,7 @@ export default function NavBar() {
           Free Risk Assessment
         </button>
       </div>
-      <SideBar />
+      <SideBar sideTop={initialCordinate?.bottom as number}/>
     </div>
   );
 }

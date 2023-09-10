@@ -34,10 +34,10 @@ const navItem: INavItem[] = [
     url: "/contact",
   },
 ];
-export default function SideBar() {
+export default function SideBar({sideTop}:{sideTop:number}) {
   const { isOpen, menuToggle } = useAppContext();
   return (
-    <div className={`w-[45%] bg-white fixed top-0 left-0 ${isOpen ? 'h-auto transition-all duration-300 ease-in-out' : '-my-[100%] transition-all duration-300 ease-in-out'} z-10 py-10 px-4`}>
+    <div className={`w-[45%] bg-white md:hidden  fixed top-0 left-0 ${isOpen ? 'h-auto transition-all duration-300 ease-in-out' : '-ml-[100%] transition-all duration-300 ease-in-out'} z-10 py-10 px-4`}>
       <div className="flex flex-col">
         {navItem.map((nav) => {
           const { title, url, innerLink } = nav;
