@@ -8,7 +8,7 @@ export const solutionSectionData: ISectionImageDetail[] = [
     titleColored: "Diversion Mitigation Program",
     description:
       "A comprehensive on-site review of your current processes is necessary to identify areas of risk. A comprehensive drug diversion prevention and monitoring program must look for ways to improve controlled substance security, thereby minimizing the avenues for diversion.",
-    readmoreUrl: '/solution/diversion-mitigation'
+    readmoreUrl: '/solution/diversion'
   },
   {
     imageSrc: "/group-image-2.png",

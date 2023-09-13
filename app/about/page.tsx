@@ -2,6 +2,12 @@ import Image from "next/image";
 import Header from "../components/Header";
 import SectionTitle from "../components/SectionTitle";
 import CommentSection from "../components/CommentSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rx-Expert About",
+  description: "About Rxpert",
+};
 
 export default function About() {
   return (

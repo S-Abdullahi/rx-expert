@@ -6,6 +6,12 @@ import { CiSearch } from "react-icons/ci";
 import { RecentBlogPost } from "../section data/blog.data";
 import SmallBlogCard from "../components/SmallBlogCard";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rx-Expert Blog",
+  description: "Rxpert blog",
+};
 
 export default function Blog() {
   return (

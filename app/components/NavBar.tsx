@@ -54,18 +54,16 @@ export default function NavBar() {
         }
       });
     }
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
+
   }
   getHeight();
 
   const { isOpen, menuToggle } = useAppContext();
   return (
     <div
-      className={`bg-white h-[73px] flex justify-between items-center px-6 lg:px-32 transition-all ease-linear ${
+      className={`bg-white h-[73px] flex justify-between items-center px-6 lg:px-32 transition-all duration-300 ease-linear ${
         navStick
-          ? "fixed top-0 left-0 w-full opacity-2 transition-all ease-linear z-20"
+          ? "fixed top-0 left-0 w-full opacity-2 transition-all ease-linear duration-300 z-20"
           : "relative"
       }`}
       ref={ref}
@@ -90,7 +88,7 @@ export default function NavBar() {
           Free Risk Assessment
         </button>
       </div>
-      <SideBar sideTop={initialCordinate?.bottom as number}/>
+      <SideBar/>
     </div>
   );
 }

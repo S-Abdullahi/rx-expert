@@ -120,7 +120,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
-            <Button buttonText="Read more" variant="contained" />
+            <Button buttonText="Read more" variant="contained" url="/about"/>
             <Button
               buttonText="Connect with Terri on Linkedin!"
               variant="outlined"
@@ -175,6 +175,7 @@ export default function Home() {
               buttonText="Read More About Rxpert Solutions Consulting Solutions"
               variant="outlined"
               themeColor="tertiary"
+              url="/solution"
             />
           </div>
         </div>

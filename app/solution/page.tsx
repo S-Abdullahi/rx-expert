@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import Header from "../components/Header";
 import SectionTitle from "../components/SectionTitle";
 import SectionImageDetails from "../components/sectionImageDetail";
 import { solutionSectionData } from "../section data/homepage.data";
+
+export const metadata: Metadata = {
+  title: "Rxpert Solution",
+  description: "Rxpert solution",
+};
 
 export default function Solution() {
   return (
@@ -29,6 +35,7 @@ export default function Solution() {
               titlePlain,
               titleColored,
               description,
+              readmoreUrl
             } = data;
             return (
               <SectionImageDetails
@@ -39,6 +46,7 @@ export default function Solution() {
                 titleColored={titleColored}
                 description={description}
                 order={index + 1}
+                readmoreUrl={readmoreUrl}
               />
             );
           })}
