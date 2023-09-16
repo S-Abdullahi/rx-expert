@@ -73,3 +73,19 @@ export const RecentBlogPost: ISmallBlogCard[] = [
     previewText: "I recently read a blog by Dennis Tribble",
   },
 ];
+
+interface IBlogContent {
+  id: string,
+  heading: string,
+  imageUrl: string,
+  body: string
+}
+
+const blogContent: IBlogContent[] = [
+  {
+     id: 'blog 1',
+     heading: 'Diversion',
+     'imageUrl': '/img-7.png',
+     body: 'What kind of evidence do you need to pronounce a guilty verdict when it comes to diversion? Catching someone in the act of placing medication in their pocket when they are supposed to be wasting or seeing vials fall out of their locker leaves little room for doubt. Watching someone on camera substitute saline for another medication is definitive. Interviewing a reliable patient immediately after a nurse charts administration of a pain med and hearing the patient did not receive it is conclusive. But what if you don’t have those types of “proof”. What if you have data that tells you this person practices differently than their peers? They dispense more, they waste more, they enter more verbal orders, or they do not account for some of the meds they have removed.' 
+  }
+]
