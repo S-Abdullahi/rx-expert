@@ -1,13 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ISmallBlogCard {
+  id: string;
   imageUrl: string;
-  title: string;
-  previewText: string;
+  header: string;
+  body: string;
 }
 
 export default function SmallBlogCard(props: ISmallBlogCard) {
-  const { imageUrl, title, previewText } = props;
+  const { id, imageUrl, header, body } = props;
   return (
     <div className="flex gap-3">
       <div className="overflow-hidden rounded-md relative">
@@ -24,10 +26,13 @@ export default function SmallBlogCard(props: ISmallBlogCard) {
         </div>
       </div>
       <div>
-        <p className="text-[#0F468E] font-semibold">{title}</p>
-        <p className="text-[#363636] md:max-w-[210px]">{previewText}</p>
+        <p className="text-[#0F468E] font-semibold">{header}</p>
+        <p className="text-[#363636] md:max-w-[210px]">{`${body?.substring(
+          0,
+          50
+        )}...`}</p>
         <span className="font-semibold text-sm text-[#363636] cursor-pointer">
-          Read More
+          <Link href={`/blog/${id}`}>Read More</Link>
         </span>
       </div>
     </div>

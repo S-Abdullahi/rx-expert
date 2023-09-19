@@ -7,6 +7,7 @@ import { RecentBlogPost } from "../section data/blog.data";
 import SmallBlogCard from "../components/SmallBlogCard";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import { Metadata } from "next";
+import { blogContent } from "../section data/blog.data";
 
 export const metadata: Metadata = {
   title: "Rx-Expert Blog",
@@ -37,17 +38,29 @@ export default function Blog() {
             Recent <span className="text-[#0F468E] font-semibold">Posts</span>
           </p>
           <div className="flex flex-col gap-4">
-            {RecentBlogPost.map((post, index) => {
-              return <SmallBlogCard {...post} key={`${post.title}-${index}`} />;
+            {blogContent?.map((post, index) => {
+              return (
+                <SmallBlogCard
+                  id={post?.id}
+                  imageUrl={post?.imageUrl}
+                  header={post?.heading}
+                  body={post?.body}
+                  key={`${post.id}-${index}`}
+                />
+              );
             })}
           </div>
         </div>
       </section>
       <div className="mb-4 flex justify-center">
         <div className="border-[1px] py-1 px-2 rounded-lg border-[#0f468E] flex gap-2">
-          <button className="flex items-center"><MdNavigateBefore/> prev</button>
+          <button className="flex items-center">
+            <MdNavigateBefore /> prev
+          </button>
           <button>1</button>
-          <button className="flex items-center">next <MdNavigateNext/></button>
+          <button className="flex items-center">
+            next <MdNavigateNext />
+          </button>
         </div>
       </div>
     </div>

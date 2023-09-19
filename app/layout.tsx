@@ -7,6 +7,8 @@ import SectionTitle from "./components/SectionTitle";
 import FormRow from "./components/FormRow";
 import NavBar from "./components/NavBar";
 import { AppProvider } from "./Context";
+import { blogContent } from "./section data/blog.data";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -115,16 +117,17 @@ export default function RootLayout({
             <div className="">
               <h3 className="text-xl font-semibold mb-3">Recent Post</h3>
               <div className="">
-                {footerBlogData.map((data) => {
-                  const { title, description, imageUrl } = data;
+                {blogContent.map((data) => {
+                  const { id, heading, body, imageUrl } = data;
+                  // const { title, description, imageUrl } = data;
                   return (
                     <article
-                      key={title}
+                      key={id}
                       className="flex flex-col md:flex-row md:items-center mb-1 gap-2"
                     >
                       <Image
                         src={imageUrl}
-                        alt={title}
+                        alt={heading}
                         width={106}
                         height={98}
                         className="object-contain rounded-md"
@@ -132,12 +135,14 @@ export default function RootLayout({
 
                       <div>
                         <h5 className="text-[#0F468E] font-semibold">
-                          {title}
+                          {heading}
                         </h5>
                         <p className="max-w-[342px] text-base leading-5">
-                          {description}
+                          {`${body.substring(0,50)}...`}
                         </p>
-                        <button className="text-xs font-bold">Read More</button>
+                        <button className="text-xs font-bold">
+                          <Link href={`/blog/${id}`}>Read more</Link>
+                        </button>
                       </div>
                     </article>
                   );
