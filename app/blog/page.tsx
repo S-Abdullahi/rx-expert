@@ -24,6 +24,8 @@ export default function Blog() {
             return <MainBlogCard key={blog.id} {...blog} />;
           })}
         </div>
+
+        {/* Right layout */}
         <div className="md:col-span-4">
           <div className="bg-[#0F468E] py-9 px-6 max-w-[331px]">
             <div className="w-full relative flex items-center">

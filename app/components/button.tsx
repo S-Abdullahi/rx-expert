@@ -7,10 +7,11 @@ type IButton = {
   variant?: "outlined" | "contained" | "submit";
   themeColor?: "primary" | "secondary" | "tertiary";
   url?: string;
+  onAction?: ()=>void;
 };
 
 export default function Button(prop: IButton) {
-  const { buttonText, type, variant, themeColor, url } = prop;
+  const { buttonText, type, variant, themeColor, url, onAction } = prop;
   let buttonbg;
   if (variant === "outlined") {
     if (themeColor === "tertiary") {
@@ -29,6 +30,7 @@ export default function Button(prop: IButton) {
     <Link href={url || ''}>
       <button
         className={`flex items-center gap-2 px-6 py-2 mt-5 rounded-full border  ${buttonbg}`}
+        onClick={onAction}
       >
         {buttonText} <BsArrowRight />{" "}
       </button>

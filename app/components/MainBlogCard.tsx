@@ -31,7 +31,12 @@ export default function MainBlogCard(props: IBlogData) {
         </div>
       </div>
       <p className="max-w-[835px] text-[#363636]">{previewText}</p>
-      <Button buttonText="Read More" variant="outlined" themeColor="tertiary" />
+      <Button
+        buttonText="Read More"
+        variant="outlined"
+        themeColor="tertiary"
+        url={`/blog/${id}`}
+      />
     </div>
   );
 }
