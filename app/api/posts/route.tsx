@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import connect from "@/app/utils/db";
-import BlogPost from "../../models/Posts";
-import { IPost } from "@/app/models/Posts";
 
 export const GET = async () => {
   try {
