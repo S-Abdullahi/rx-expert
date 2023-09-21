@@ -4,8 +4,33 @@ import FormRow from "@/app/components/FormRow";
 import Image from "next/image";
 import { LiaEdit } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactNode,
+  ReactPortal,
+  PromiseLikeOfReactNode,
+} from "react";
 
-export default function Portal() {
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+interface IData {
+  title: string;
+}
+export default async function Portal() {
+  const data = await getData();
+
   return (
     <div>
       <Header title="Admin Portal" label="admin-portal" />
@@ -13,9 +38,12 @@ export default function Portal() {
         {/* blog post list */}
         <section>
           <p className="text-lg mb-4">All blog posts</p>
+          {/* {data?.map((item: IData) => {
+            return <p>{item.title}</p>;
+          })} */}
           {BlogData.map((item, index) => {
             return (
-              <div className="bg-gray-100 mb-6 p-3 rounded-sm">
+              <div className="bg-gray-100 mb-6 p-3 rounded-sm" key={`${item.heading}-${index}`}>
                 <Image
                   src={item.imageUrl}
                   alt={item.heading as string}
