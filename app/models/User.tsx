@@ -11,8 +11,8 @@ interface User {
 // Schema
 const schema = new Schema<User>(
   {
-    name: { type: String, required: true },
-    email: { type: String, required: true },
+    name: { type: String, required: [true, 'Enter name'] },
+    email: { type: String, required: [true, 'Enter your email'] },
     password: String,
   },
   { timestamps: true }
