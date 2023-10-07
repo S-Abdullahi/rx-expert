@@ -1,14 +1,16 @@
 "use client";
 import React, { ReactNode, createContext, useContext, useState } from "react";
+import axios from "axios";
+import Image from "next/image";
 
 type appContextType = {
   menuToggle: () => void;
-  isOpen: boolean
+  isOpen: boolean;
 };
 
 const appDefaultValue: appContextType = {
   menuToggle: () => {},
-  isOpen: false
+  isOpen: false,
 };
 const appContext = createContext<appContextType>(appDefaultValue);
 
